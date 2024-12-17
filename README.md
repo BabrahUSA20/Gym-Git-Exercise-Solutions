@@ -67,3 +67,40 @@ See git-pull(1) for details.
 If you wish to set tracking information for this branch you can do so with:
 
     git branch --set-upstream-to=origin/<branch> main
+gymicyerekezo@icyerekezos-iMac Gym-Git-Exercise-Solutions % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+gymicyerekezo@icyerekezos-iMac Gym-Git-Exercise-Solutions % git branch     
+* main
+gymicyerekezo@icyerekezos-iMac Gym-Git-Exercise-Solutions % git push origin main                           
+Everything up-to-date
+gymicyerekezo@icyerekezos-iMac Gym-Git-Exercise-Solutions % ls
+README.md
+gymicyerekezo@icyerekezos-iMac Gym-Git-Exercise-Solutions % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+gymicyerekezo@icyerekezos-iMac Gym-Git-Exercise-Solutions % git add . 
+gymicyerekezo@icyerekezos-iMac Gym-Git-Exercise-Solutions % git commit -m "Updated readme"  
+
+[main 5c75ddf] Updated readme
+ 1 file changed, 69 insertions(+), 1 deletion(-)
+ rewrite README.md (100%)
+gymicyerekezo@icyerekezos-iMac Gym-Git-Exercise-Solutions % git push origin main          
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 1.08 KiB | 1.08 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git
+   6b986f0..5c75ddf  main -> main
+gymicyerekezo@icyerekezos-iMac Gym-Git-Exercise-Solutions % 
