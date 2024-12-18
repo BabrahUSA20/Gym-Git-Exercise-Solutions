@@ -1,6 +1,6 @@
 # GIT Exercises Projects
 # Bunddle 1  
-# Exercise 2
+# Exercise 1
 This first exercise will be covering the basics.
 
 ```bash
@@ -142,8 +142,8 @@ PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git branch
   main
 PS C:\Users\rurmi\Gym-Git-Exercise-Solutions>
 ```
-```bash
 # Exercise 2
+```bash
 PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git commit -m "this readme" 
 PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git status
 On branch main
