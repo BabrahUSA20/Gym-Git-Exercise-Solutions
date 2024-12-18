@@ -245,3 +245,166 @@ M       README.md
 PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> 
 PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> 
 ```
+# Bundle 2
+# Exercise 1
+```bash 
+    --[no-]ignore-other-worktrees
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git branch
+olutions> git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git branch
+  dev
+* ft/bundle-2
+  main
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> touch service.html
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> mv .\service.html services.html
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git status
+On branch ft/bundle-2
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        services.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git add .
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git commit -m "service ready to be pushed"
+[ft/bundle-2 51eba34] service ready to be pushed
+ 1 file changed, 11 insertions(+)
+ create mode 100644 services.html
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git push --set-upstream origin ft/bundle-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 468 bytes | 468.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions/pull/new/ft/bundle-2
+remote:
+To https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git add .
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git commit -m "ready to push readme"      
+[ft/bundle-2 5cd92d1] ready to push readme
+ 1 file changed, 38 insertions(+)
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git branch                                
+  dev
+* ft/bundle-2
+  main
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git branch main
+fatal: a branch named 'main' already exists
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git branch     
+  dev
+* ft/bundle-2
+  main
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git checkout main 
+error: Your local changes to the following files would be overwritten by checkout:
+        README.md
+Please commit your changes or stash them before you switch branches.
+Aborting
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git branch       
+  dev
+* ft/bundle-2
+  main
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git status
+On branch ft/bundle-2
+Your branch is ahead of 'origin/ft/bundle-2' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git checkout main
+error: Your local changes to the following files would be overwritten by checkout:
+        README.md
+Please commit your changes or stash them before you switch branches.
+Aborting
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> get reset
+get : The term 'get' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the 
+name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ get reset
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (get:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git status       
+On branch ft/bundle-2
+Your branch is ahead of 'origin/ft/bundle-2' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git reset 
+Unstaged changes after reset:
+M       README.md
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git status
+On branch ft/bundle-2
+Your branch is ahead of 'origin/ft/bundle-2' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git checkout main
+error: Your local changes to the following files would be overwritten by checkout:
+        README.md
+Please commit your changes or stash them before you switch branches.
+Aborting
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git commit "reseting"
+error: pathspec 'reseting' did not match any file(s) known to git
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git commit -m "reseting"
+On branch ft/bundle-2
+Your branch is ahead of 'origin/ft/bundle-2' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git status              
+On branch ft/bundle-2
+Your branch is ahead of 'origin/ft/bundle-2' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git reset README.md     
+Unstaged changes after reset:
+M       README.md
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git checkout main       
+error: Your local changes to the following files would be overwritten by checkout:
+        README.md
+Please commit your changes or stash them before you switch branches.
+Aborting
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git stash          
+Saved working directory and index state WIP on ft/bundle-2: 5cd92d1 ready to push readme
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git stash list   
+stash@{0}: WIP on ft/bundle-2: 5cd92d1 ready to push readme
+stash@{1}: WIP on main: 846e503 Commited the current changes and read to be pushed
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git checkout main  
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git branch
+  dev
+  ft/bundle-2
+* main
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> 
+```
