@@ -104,3 +104,43 @@ Total 3 (delta 0), reused 0 (delta 0)
 To https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git
    6b986f0..5c75ddf  main -> main
 gymicyerekezo@icyerekezos-iMac Gym-Git-Exercise-Solutions % 
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git branch
+* dev
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git branch
+* dev
+  main
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git branch  ev     
+* dev
+  main
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git branch dev   
+fatal: a branch named 'dev' already exists
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git branch -c test
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git branch       
+* dev
+  main
+  test
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions>
+                                              git checkout test
+Switched to branch 'test'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git branch       
+  dev
+  main
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git checkout dev
+Switched to branch 'dev'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git branch
+* dev
+  main
+  test
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git branch -d test
+Deleted branch test (was e49fe9e).
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git branch
+* dev
+  main
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions>
+
+# Bunddle 2
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> touch home.html
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> touch about.html
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> touch team.html 1
