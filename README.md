@@ -217,4 +217,28 @@ Changes to be committed:
         new file:   home.html
 
 Dropped stash@{1} (6791c7b45f51bc2d8eabd46d565a21d108dea520)
+
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git add .
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git commit -m "Commited the current changes and read to be pushed" 
+[main 846e503] Commited the current changes and read to be pushed
+ 3 files changed, 103 insertions(+), 5 deletions(-)
+ create mode 100644 about.html
+ create mode 100644 home.html
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git push origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.16 KiB | 297.00 KiB/s, done.    
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)  
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git
+   04634cd..846e503  main -> main
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git reset         
+Unstaged changes after reset:
+M       README.md
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git reset
+Unstaged changes after reset:
+M       README.md
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> 
 PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> 
