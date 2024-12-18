@@ -3,6 +3,7 @@
 # Exercise 2
 This first exercise will be covering the basics.
 
+```bash
 gymicyerekezo@icyerekezos-iMac GitExerciseSolu % ls
 README.md
 gymicyerekezo@icyerekezos-iMac GitExerciseSolu % git init
@@ -140,7 +141,8 @@ PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git branch
 * dev
   main
 PS C:\Users\rurmi\Gym-Git-Exercise-Solutions>
-
+```
+```bash
 # Exercise 2
 PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git commit -m "this readme" 
 PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git status
@@ -242,3 +244,4 @@ Unstaged changes after reset:
 M       README.md
 PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> 
 PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> 
+```
