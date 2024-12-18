@@ -1,5 +1,6 @@
 # GIT Exercises Projects
-# Bunddle 1 
+# Bunddle 1  
+# Exercise 2
 This first exercise will be covering the basics.
 
 gymicyerekezo@icyerekezos-iMac GitExerciseSolu % ls
@@ -140,7 +141,80 @@ PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git branch
   main
 PS C:\Users\rurmi\Gym-Git-Exercise-Solutions>
 
-# Bunddle 2
-PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> touch home.html
-PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> touch about.html
-PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> touch team.html 1
+# Exercise 2
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git commit -m "this readme" 
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git status
+On branch main
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git status       
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        home.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git stash list 
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git add .
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git status     
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   home.html
+
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git stash list
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   home.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git add team.html
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git stash list   
+stash@{0}: WIP on main: 04634cd this readme
+stash@{1}: WIP on main: 04634cd this readme
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git stash        
+Saved working directory and index state WIP on main: 04634cd this readme
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git stash list
+stash@{0}: WIP on main: 04634cd this readme
+stash@{1}: WIP on main: 04634cd this readme
+stash@{2}: WIP on main: 04634cd this readme
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git stash list
+stash@{0}: WIP on main: 04634cd this readme
+stash@{1}: WIP on main: 04634cd this readme
+stash@{2}: WIP on main: 04634cd this readme
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git stash pop stash@{1}
+error: unknown switch `e'
+usage: git stash pop [--index] [-q | --quiet] [<stash>]
+
+    -q, --[no-]quiet      be quiet, only report errors
+    --[no-]index          attempt to recreate the index
+
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git stash pop "stash@{1}"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   home.html
+
+Dropped stash@{1} (77273d34c7e33e3a3cfb5c862d55669c33765f86)
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git stash list           
+stash@{0}: WIP on main: 04634cd this readme
+stash@{1}: WIP on main: 04634cd this readme
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git stash pop "stash@{1}"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   home.html
+
+Dropped stash@{1} (6791c7b45f51bc2d8eabd46d565a21d108dea520)
+PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> 
