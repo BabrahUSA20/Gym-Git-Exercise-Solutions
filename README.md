@@ -667,3 +667,414 @@ To https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git
 rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/service-redesign)
 
 ```
+# Bundle 3
+# Exercise 1
+```bash 
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (main)
+$ git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/team-page)
+$ touch team.html
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git add .
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git commit -m "pushing team file"
+[ft/team-page 864741f] pushing team file
+ 1 file changed, 12 insertions(+)
+ create mode 100644 team.html
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git remote add origin https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git
+error: remote origin already exists.
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git push -u origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 454 bytes | 454.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions/pull/new/ft/team-page
+remote:
+To https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (main)
+$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git log
+commit 864741f4e73fdc91dbb190a2470196926bec5421 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: Your Name <you@example.com>
+Date:   Sun Dec 22 17:19:10 2024 +0200
+
+    pushing team file
+
+commit fe4eaf4e08ef042ed30072db1b2a17d056dc262d (origin/main, origin/HEAD, main, ft/contact-page)    
+Author: Your Name <you@example.com>
+Date:   Sun Dec 22 17:07:50 2024 +0200
+
+    updating  the readme
+
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git checkout  ft/contact-page
+Switched to branch 'ft/contact-page'
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git cherry-pick 864741f4e73fdc91dbb190a2470196926bec5421
+[ft/contact-page 19e4134] pushing team file
+ Date: Sun Dec 22 17:19:10 2024 +0200
+ 1 file changed, 12 insertions(+)
+ create mode 100644 team.html
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git status
+On branch ft/contact-page
+nothing to commit, working tree clean
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git status
+On branch ft/contact-page
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   team.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git add .
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git commit -m "added a change in contact page"
+[ft/contact-page f5fef11] added a change in contact page
+ 1 file changed, 1 insertion(+)
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git push -u origin ft/contact-page
+
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git remote add origin https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git
+error: remote origin already exists.
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git push -u origin ft/contact-page
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 696 bytes | 696.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions/pull/new/ft/contact-page      
+remote:
+To https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git branch -c ft/faq-page
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git switch ft/faq-page
+Switched to branch 'ft/faq-page'
+Your branch is up to date with 'origin/ft/contact-page'.
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ touch faq.html
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git add .
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git commit -m "pushed faq file"
+[ft/faq-page 8356904] pushed faq file
+ 1 file changed, 12 insertions(+)
+ create mode 100644 faq.html
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git remote add origin https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git
+error: remote origin already exists.
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git push -u origin ft/faq-page
+fatal: unable to access 'https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git/': Failed to connect to github.com port 443 after 21233 ms: Could not connect to server
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git remote add origin https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git
+error: remote origin already exists.
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git push -u origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 447 bytes | 447.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions/pull/new/ft/faq-page
+remote:
+To https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git revert 864741f4e73fdc91dbb190a2470196926bec5421
+CONFLICT (modify/delete): team.html deleted in parent of 864741f (pushing team file) and modified in HEAD.  Version HEAD of team.html left in tree.
+error: could not revert 864741f... pushing team file
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git revert --continue".
+hint: You can instead skip this commit with "git revert --skip".
+hint: To abort and get back to the state before "git revert",
+hint: run "git revert --abort".
+hint: Disable this message with "git config advice.mergeConflict false"
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page|REVERTING)
+$
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page|REVERTING)
+$ git status
+On branch ft/faq-page
+Your branch is up to date with 'origin/ft/faq-page'.
+
+You are currently reverting commit 864741f.
+  (fix conflicts and run "git revert --continue")
+  (use "git revert --skip" to skip this patch)
+  (use "git revert --abort" to cancel the revert operation)
+
+Unmerged paths:
+  (use "git restore --staged <file>..." to unstage)
+  (use "git add/rm <file>..." as appropriate to mark resolution)
+        deleted by them: team.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page|REVERTING)
+$ git add .
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page|REVERTING)
+$ git commit -m "team was reverted in this faq branch"
+On branch ft/faq-page
+Your branch is up to date with 'origin/ft/faq-page'.
+
+You are currently reverting commit 864741f.
+  (all conflicts fixed: run "git revert --continue")
+  (use "git revert --skip" to skip this patch)
+  (use "git revert --abort" to cancel the revert operation)
+
+nothing to commit, working tree clean
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page|REVERTING)
+$ git status
+On branch ft/faq-page
+Your branch is up to date with 'origin/ft/faq-page'.
+
+You are currently reverting commit 864741f.
+  (all conflicts fixed: run "git revert --continue")
+  (use "git revert --skip" to skip this patch)
+  (use "git revert --abort" to cancel the revert operation)
+
+nothing to commit, working tree clean
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page|REVERTING)
+$ git push  origin ft/faq-page
+Everything up-to-date
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page|REVERTING)
+$
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page|REVERTING)
+$ git revert --continue
+On branch ft/faq-page
+Your branch is up to date with 'origin/ft/faq-page'.
+
+You are currently reverting commit 864741f.
+  (all conflicts fixed: run "git revert --continue")
+  (use "git revert --skip" to skip this patch)
+  (use "git revert --abort" to cancel the revert operation)
+
+nothing to commit, working tree clean
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page|REVERTING)
+$ git status
+On branch ft/faq-page
+Your branch is up to date with 'origin/ft/faq-page'.
+
+You are currently reverting commit 864741f.
+  (all conflicts fixed: run "git revert --continue")
+  (use "git revert --skip" to skip this patch)
+  (use "git revert --abort" to cancel the revert operation)
+
+nothing to commit, working tree clean
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page|REVERTING)
+$ git push -u origin ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+Everything up-to-date
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page|REVERTING)
+$ git log --oneline
+8356904 (HEAD -> ft/faq-page, origin/ft/faq-page) pushed faq file
+f5fef11 (origin/ft/contact-page, ft/contact-page) added a change in contact page
+19e4134 pushing team file
+fe4eaf4 (origin/main, origin/HEAD, main) updating  the readme
+83d149c made a change
+9d486bd commiting the change in main branch
+9ab24f6 Merge branch 'main' of https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions
+110e969 sending my work
+c2c262b Merge pull request #1 from BabrahUSA20/ft/bundle-2
+51eba34 (origin/ft/bundle-2) service ready to be pushed
+c6427bb updated readme
+350326c updated readme
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page|REVERTING)
+$
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page|REVERTING)
+$ git status
+On branch ft/faq-page
+Your branch is up to date with 'origin/ft/faq-page'.
+
+You are currently reverting commit 864741f.
+  (all conflicts fixed: run "git revert --continue")
+  (use "git revert --skip" to skip this patch)
+  (use "git revert --abort" to cancel the revert operation)
+
+nothing to commit, working tree clean
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page|REVERTING)
+$ git revert --abort
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git revert 864741f4e73fdc91dbb190a2470196926bec5421
+CONFLICT (modify/delete): team.html deleted in parent of 864741f (pushing team file) and modified in HEAD.  Version HEAD of team.html left in tree.
+error: could not revert 864741f... pushing team file
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git revert --continue".
+hint: You can instead skip this commit with "git revert --skip".
+hint: To abort and get back to the state before "git revert",
+hint: run "git revert --abort".
+hint: Disable this message with "git config advice.mergeConflict false"
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page|REVERTING)
+$ git checkout parent-of-864741f -- team.html
+fatal: invalid reference: parent-of-864741f
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page|REVERTING)
+$ git log
+commit 8356904b2e034ccf082f13834f5d3e3559a2684c (HEAD -> ft/faq-page, origin/ft/faq-page)
+Author: Your Name <you@example.com>
+Date:   Sun Dec 22 17:44:55 2024 +0200
+
+    pushed faq file
+
+commit f5fef114336f70fc1b0a4963a5e6db8e28e2c0a4 (origin/ft/contact-page, ft/contact-page)
+Author: Your Name <you@example.com>
+Date:   Sun Dec 22 17:35:21 2024 +0200
+
+    added a change in contact page
+
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page|REVERTING)
+$
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page|REVERTING)
+$ git push
+fatal: unable to access 'https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git/': Failed to connect to github.com port 443 after 21130 ms: Could not connect to server
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page|REVERTING)
+$ git remote add origin https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git
+error: remote origin already exists.
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page|REVERTING)
+$ git push
+fatal: unable to access 'https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git/': Failed to connect to github.com port 443 after 21102 ms: Could not connect to server
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page|REVERTING)
+$ git status
+On branch ft/faq-page
+Your branch is up to date with 'origin/ft/faq-page'.
+
+You are currently reverting commit 864741f.
+  (fix conflicts and run "git revert --continue")
+  (use "git revert --skip" to skip this patch)
+  (use "git revert --abort" to cancel the revert operation)
+
+Unmerged paths:
+  (use "git restore --staged <file>..." to unstage)
+  (use "git add/rm <file>..." as appropriate to mark resolution)
+        deleted by them: team.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page|REVERTING)
+$ git add .
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page|REVERTING)
+$ git commit -m "team was reverted in this faq branch"
+On branch ft/faq-page
+Your branch is up to date with 'origin/ft/faq-page'.
+
+You are currently reverting commit 864741f.
+  (all conflicts fixed: run "git revert --continue")
+  (use "git revert --skip" to skip this patch)
+  (use "git revert --abort" to cancel the revert operation)
+
+nothing to commit, working tree clean
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page|REVERTING)
+$ git push
+Everything up-to-date
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page|REVERTING)
+$ git switch main
+fatal: cannot switch branch while reverting
+Consider "git revert --quit" or "git worktree add".
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page|REVERTING)
+$ git revert --quit
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git status
+On branch ft/faq-page
+Your branch is up to date with 'origin/ft/faq-page'.
+
+nothing to commit, working tree clean
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git status
+On branch ft/faq-page
+Your branch is up to date with 'origin/ft/faq-page'.
+
+nothing to commit, working tree clean
+
+```
