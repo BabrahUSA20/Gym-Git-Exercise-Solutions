@@ -142,7 +142,9 @@ PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git branch
   main
 PS C:\Users\rurmi\Gym-Git-Exercise-Solutions>
 ```
+
 # Exercise 2
+
 ```bash
 PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git commit -m "this readme" 
 PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git status
@@ -245,8 +247,11 @@ M       README.md
 PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> 
 PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> 
 ```
+
+
 # Bundle 2
 # Exercise 1
+
 ```bash 
     --[no-]ignore-other-worktrees
 PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git branch
@@ -407,4 +412,258 @@ PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> git branch
   ft/bundle-2
 * main
 PS C:\Users\rurmi\Gym-Git-Exercise-Solutions> 
+```
+# Exercise 2
+```bash
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (main)
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (main)
+$ git checkout -b ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/service-redesign)
+$ touch service.html
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/service-redesign)
+$ git remote add origin https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.g
+it
+error: remote origin already exists.
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/service-redesign)
+$ git status
+On branch ft/service-redesign
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        service.html
+
+nothing added to commit but untracked files present (use "git add" to track)       
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/service-redesign)
+$ git add .
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/service-redesign)
+$ git commit -m "pushed mu service file"
+[ft/service-redesign 78410f8] pushed mu service file
+ 1 file changed, 12 insertions(+)
+ create mode 100644 service.html
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/service-redesign)
+$ git push -u origin ft/service-redesign
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 453 bytes | 151.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:     
+remote:      https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions/pull/new/ft/service-redesign
+remote:
+To https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/service-redesign)
+$ git checkout main
+error: Your local changes to the following files would be overwritten by checkout:
+        service.html
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/service-redesign)
+$ git add .
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/service-redesign)
+$ git commit -m "commiting the change"
+[ft/service-redesign e123e79] commiting the change
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        service.html
+
+nothing added to commit but untracked files present (use "git add" to track)       
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (main)
+$ git add .
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (main)
+$ git commit -m "commiting the change in main branch"
+[main 9d486bd] commiting the change in main branch
+ 1 file changed, 12 insertions(+)
+ create mode 100644 service.html
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (main)
+$ git push 
+fatal: unable to access 'https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git/': Failed to connect to github.com port 443 after 21255 ms: Could not connect to server
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (main)
+$ git push origin main
+fatal: unable to access 'https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git/': Failed to connect to github.com port 443 after 21056 ms: Could not connect to server
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (main)
+$ git remote add origin https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git
+error: remote origin already exists.
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (main)
+$ git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 466 bytes | 116.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git
+   9ab24f6..9d486bd  main -> main
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (main)
+$ git add .
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (main)
+$ git commit -m "made a change"
+[main 83d149c] made a change
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (main)
+$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 287 bytes | 143.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git
+   9d486bd..83d149c  main -> main
+branch 'main' set up to track 'origin/main'.
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+Your branch is ahead of 'origin/ft/service-redesign' by 1 commit.
+  (use "git push" to publish your local commits)
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/service-redesign)
+$ git diff
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/service-redesign)
+$ git diff ft/service-redesign main
+diff --git a/service.html b/service.html
+index d99dc0f..1a9e581 100644
+--- a/service.html
++++ b/service.html
+@@ -6,7 +6,7 @@
+     <title>Git exercise2 | Service</title>
+ </head>
+ <body>
+-    <h1> Welcome to my SERVICE page </h1>
++    <h1> Welcome to my SERVIce page </h1>
+
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/service-redesign)
+$ git merge main
+Auto-merging service.html
+CONFLICT (add/add): Merge conflict in service.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/service-redesign|MERGING)    
+$ git status
+On branch ft/service-redesign
+Your branch is ahead of 'origin/ft/service-redesign' by 1 commit.
+  (use "git push" to publish your local commits)
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   service.html
+
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/service-redesign|MERGING)    
+$ git diff ft/service-redesign main
+diff --git a/service.html b/service.html
+index d99dc0f..1a9e581 100644
+--- a/service.html
++++ b/service.html
+@@ -6,7 +6,7 @@
+     <title>Git exercise2 | Service</title>
+ </head>
+ <body>
+-    <h1> Welcome to my SERVICE page </h1>
++    <h1> Welcome to my SERVIce page </h1>
+
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/service-redesign)
+$ git merge main
+Auto-merging service.html
+CONFLICT (add/add): Merge conflict in service.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/service-redesign|MERGING)    
+$ git status
+On branch ft/service-redesign
+Your branch is ahead of 'origin/ft/service-redesign' by 1 commit.
+  (use "git push" to publish your local commits)
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   service.html
+
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/service-redesign|MERGING)    
+$ git diff ft/service-redesign main
+diff --git a/service.html b/service.html
+index d99dc0f..1a9e581 100644
+--- a/service.html
++++ b/service.html
+@@ -6,7 +6,7 @@
+     <title>Git exercise2 | Service</title>
+ </head>
+ <body>
+-    <h1> Welcome to my SERVICE page </h1>
++    <h1> Welcome to my SERVIce page </h1>
++    <h1> Welcome to my SERVIce page </h1>        
+
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/service-redesign|MERGING)
+$ git status
+On branch ft/service-redesign
+Your branch is ahead of 'origin/ft/service-redesign' by 1 commit.
+  (use "git push" to publish your local commits)
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   service.html
+
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/service-redesign|MERGING)
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/service-redesign)
+$ git push origin ft/service-redesign
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 550 bytes | 137.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git
+   78410f8..f7f6d29  ft/service-redesign -> ft/service-redesign
+
+rurmi@Babrah MINGW64 ~/Gym-Git-Exercise-Solutions (ft/service-redesign)
+
 ```
