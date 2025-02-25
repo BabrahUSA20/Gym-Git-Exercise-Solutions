@@ -1284,8 +1284,13 @@ Uruyanges-iMac:git-cafe-exercise gymuruyange$
 
  =============
  this was done through :
- 
+
  https://github.com/TheGymRwanda/git-cafe-exercise/pull/486
 
  this i main about how you pull the project from the personal 's github by " click the "Fork" button at the top-right of the page. --> Once the fork is done, you should see a new repo under your GitHub account:"and then immediately appear on your github platform and where you can clon eand edit it and immidiately see the changeon your git hub and you can also pull the request and down also you can view the change made
+
+ you are able to see this 
+ --->forked from TheGymRwanda/git-cafe-exercise
+ and this : 
+ -->This branch is 1 commit ahead of TheGymRwanda/git-cafe-exercise:main. then you can pull the request  from contribute then follow other steps 
 ```
