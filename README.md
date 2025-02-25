@@ -1083,6 +1083,91 @@ nothing to commit, working tree clean
 # Exercise 1
 
 ```bash
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git branch
+* main
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git checkout -b ft/faq-page 
+Switched to a new branch 'ft/faq-page'
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git branch
+* ft/faq-page
+  main
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git branch
+  ft/faq-page
+* ft/home-page-redesign
+  main
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$  git branch main
+fatal: a branch named 'main' already exists
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git checkout main
+M       README.md
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git branch
+  ft/faq-page
+  ft/home-page-redesign
+* main
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git checkout ft/home-page-redesign
+M       README.md
+M       services.html
+Switched to branch 'ft/home-page-redesign'
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git checkout main
+M       README.md
+M       services.html
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git add .
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git commit -m "pushing the change"
+[main cb94860] pushing the change
+ 2 files changed, 9 insertions(+)
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git push origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 651 bytes | 651.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git
+   7cb0920..cb94860  main -> main
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git fetch origin
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git pull origin main
 
+^C
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git pull origin main
+ç^C
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git branch
+  ft/faq-page
+  ft/home-page-redesign
+* main
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git status
+On branch ft/home-page-redesign
+nothing to commit, working tree clean
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git add .
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git rebase --continue
+fatal: No rebase in progress?
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git push origin ft/home-page-redesign --force
+
+^C
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git push origin ft/home-page-redesign 
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions/pull/new/ft/home-page-redesign
+remote: 
+To https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ 
 
 ```
