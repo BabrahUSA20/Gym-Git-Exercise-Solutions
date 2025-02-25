@@ -1078,3 +1078,11 @@ Your branch is up to date with 'origin/ft/faq-page'.
 nothing to commit, working tree clean
 
 ```
+
+
+# Exercise 1
+
+```bash
+
+
+```
