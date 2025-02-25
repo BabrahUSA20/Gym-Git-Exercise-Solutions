@@ -1225,9 +1225,57 @@ Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$
 # Bunddle 4
 # Exercise 1
 ```bash
+This is mainly about pushing the change from the original repository to the second repository by writh
+
+ git push git-coppy main the since you have linked it by** git remote add git-copy [ your url ]**
+you can alos do git remote -v to see the list of repository link on that specific repo
 
 
 
+
+
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git branch
+  ft/faq-page
+  ft/home-page-redesign
+* main
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git add .
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git commit -m "Updated home page content"
+[main 197219e] Updated home page content
+ 2 files changed, 18 insertions(+)
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git push origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 566 bytes | 566.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git
+   8a1433b..197219e  main -> main
+
+error: remote origin already exists.
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ cd .git
+Uruyanges-iMac:.git gymuruyange$ nano config
+Uruyanges-iMac:.git gymuruyange$ git remote -v
+origin  https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git (fetch)
+origin  https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git (push)
+Uruyanges-iMac:.git gymuruyange$ git remote add git-copy https://github.com/BabrahUSA20/git-copy.git
+Uruyanges-iMac:.git gymuruyange$ git remote -v
+git-copy        https://github.com/BabrahUSA20/git-copy.git (fetch)
+git-copy        https://github.com/BabrahUSA20/git-copy.git (push)
+origin  https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git (fetch)
+origin  https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git (push)
+Uruyanges-iMac:.git gymuruyange$ git push git-copy main
+Enumerating objects: 64, done.
+Counting objects: 100% (64/64), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (40/40), done.
+Writing objects: 100% (64/64), 19.08 KiB | 19.08 MiB/s, done.
+Total 64 (delta 29), reused 45 (delta 19), pack-reused 0
+remote: Resolving deltas: 100% (29/29), done.
+To https://github.com/BabrahUSA20/git-copy.git
+ * [new branch]      main -> main
+Uruyanges-iMac:.git gymuruyange$ 
 ```
 
 
