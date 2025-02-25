@@ -1080,7 +1080,7 @@ nothing to commit, working tree clean
 ```
 
 
-# Exercise 1
+# Exercise 2
 
 ```bash
 The default interactive shell is now zsh.
@@ -1170,4 +1170,122 @@ To https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git
  * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
 Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ 
 
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git add .
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git commit -m "pushing the readme file"
+[main af6c1dc] pushing the readme file
+ 1 file changed, 86 insertions(+), 1 deletion(-)
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.02 KiB | 1.02 MiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git
+   cb94860..af6c1dc  main -> main
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git status
+On branch ft/home-page-redesign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git add .
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git commit -m "made a change to home page "
+[ft/home-page-redesign 527cd25] made a change to home page
+ 1 file changed, 8 insertions(+)
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git push origin ft/home-page-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 520 bytes | 520.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git
+   cb94860..527cd25  ft/home-page-redesign -> ft/home-page-redesign
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ 
+
+```
+
+# Bunddle 5 
+# Exercise 1
+
+```bash
+- On your Github repo enable Github pages
+- Check if the link is publicly visible to anyone
+
+solution 
+Go to your GitHub repo:
+Open your repository on GitHub (e.g., https://github.com/YourUsername/YourRepo).
+
+Go to Settings:
+At the top-right of your repo, click the "Settings" tab (it’s near the "Insights" and "Security" tabs).
+
+Find the Pages section:
+Scroll down the settings sidebar until you see "Pages" (or use https://github.com/YourUsername/YourRepo/settings/pages).
+
+Set the branch for GitHub Pages:
+
+Under the "Source" section, choose the branch you want to deploy from (e.g., main or gh-pages).
+If you’re deploying from the main branch and your site files (like index.html) are in a specific folder (like /docs), select that folder. Otherwise, choose the root.
+Click "Save".
+Wait for the deployment:
+GitHub will set up the Pages site. Once done, you’ll see a message like:
+"Your site is published at https://YourUsername.github.io/YourRepo/"
+
+Check public visibility:
+By default, GitHub Pages are publicly accessible. Open the link and check if it’s visible. If you’re not logged into GitHub and you can still access the page, it’s public.
+(Optional) Troubleshooting visibility:
+
+Go back to Settings > General and ensure your repo is public.
+If the repo is private, only users with access can see the GitHub Pages link.
+
+for other more guidance https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
+
+```
+
+# Exercise 2
+```bash
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+Uruyanges-iMac:git-cafe-exercise gymuruyange$ git add index.html
+Uruyanges-iMac:git-cafe-exercise gymuruyange$ git commit -m "Updated welcome message on home page"
+[main f2822fc] Updated welcome message on home page
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Uruyanges-iMac:git-cafe-exercise gymuruyange$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 332 bytes | 332.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/BabrahUSA20/git-cafe-exercise.git
+   d1d3f9c..f2822fc  main -> main
+Uruyanges-iMac:git-cafe-exercise gymuruyange$ 
+ 
+
+
+ =============
+ this was done through :
+ 
+ https://github.com/TheGymRwanda/git-cafe-exercise/pull/486
+
+ this i main about how you pull the project from the personal 's github by " click the "Fork" button at the top-right of the page. --> Once the fork is done, you should see a new repo under your GitHub account:"and then immediately appear on your github platform and where you can clon eand edit it and immidiately see the changeon your git hub and you can also pull the request and down also you can view the change made
 ```
