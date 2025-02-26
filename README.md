@@ -1277,6 +1277,102 @@ To https://github.com/BabrahUSA20/git-copy.git
  * [new branch]      main -> main
 Uruyanges-iMac:.git gymuruyange$ 
 ```
+## Exercise 2
+```bash
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git add .
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git commit -m "ready to push the change made"
+[ft/footer 8a9bb62] ready to push the change made
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git push -u origin  ft/footer
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 559 bytes | 559.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions/pull/new/ft/footer
+remote: 
+To https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git add .
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git commit -m "second commit"
+[ft/footer 82e22f3] second commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git push origin  ft/footer
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 356 bytes | 356.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git
+   8a9bb62..82e22f3  ft/footer -> ft/footer
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git merge --squash ft/footer
+Updating 40fa8e7..82e22f3
+Fast-forward
+Squash commit -- not updating HEAD
+ README.md    | 2 +-
+ service.html | 3 ++-
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git commit -m "footer changes squashing"
+[ft/squashing ab4b56d] footer changes squashing
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git push origin ft/squashing
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 719 bytes | 719.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions/pull/new/ft/squashing
+remote: 
+To https://github.com/BabrahUSA20/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/squashing -> ft/squashing
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Uruyanges-iMac:Gym-Git-Exercise-Solutions gymuruyange$ 
+
+
+[This is all about learning how squashing works and its syntax
+
+
+In Git, squash is used to combine multiple commits into a single, cleaner commit.
+it help you to 👍
+
+Clean Up Commit History:
+2.Simplify Code Reviews:
+Group Related Changes:
+4.Fix Mistakes Gracefully:
+Before Merging:
+Squashing is often used when merging branches — you can merge multiple commits from a feature branch into one clean commit on main or develop.
+You use :
+git merge --squash feature-branch
+git commit -m "Add new feature with clean history"
+
+eg:
+git checkout -b ft/squashing
+git merge --squash ft/footer
+git commit -m "footer changes squashing"
+git push origin ft/squashing
+
+]
+```
 
 
 
