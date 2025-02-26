@@ -1374,15 +1374,6 @@ git push origin ft/squashing
 ]
 ```
 
-
-
-
-
-
-
-
-
-
 # Bunddle 5 
 # Exercise 1
 
@@ -1454,4 +1445,97 @@ Uruyanges-iMac:git-cafe-exercise gymuruyange$
  --->forked from TheGymRwanda/git-cafe-exercise
  and this : 
  -->This branch is 1 commit ahead of TheGymRwanda/git-cafe-exercise:main. then you can pull the request  from contribute then follow other steps 
+```
+
+
+# Bunddle 6 
+## Exercise 1
+```bash
+
+
+Uruyanges-iMac:git-cafe-exercise gymuruyange$ git branch
+* main
+Uruyanges-iMac:git-cafe-exercise gymuruyange$ git checkout -b exercise1
+Switched to a new branch 'exercise1'
+Uruyanges-iMac:git-cafe-exercise gymuruyange$ git add .
+Uruyanges-iMac:git-cafe-exercise gymuruyange$ git commit -m  "pushing the change"
+[exercise1 e18cc71] pushing the change
+ 1 file changed, 11 insertions(+)
+ create mode 100644 Menu.html
+Uruyanges-iMac:git-cafe-exercise gymuruyange$ git push -u origin exercise1
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 440 bytes | 440.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'exercise1' on GitHub by visiting:
+remote:      https://github.com/BabrahUSA20/git-cafe-exercise/pull/new/exercise1
+remote: 
+To https://github.com/BabrahUSA20/git-cafe-exercise.git
+ * [new branch]      exercise1 -> exercise1
+branch 'exercise1' set up to track 'origin/exercise1'.
+Uruyanges-iMac:git-cafe-exercise gymuruyange$ 
+
+
+Uruyanges-iMac:git-cafe-exercise gymuruyange$  git checkout -b exercise2
+Switched to a new branch 'exercise2'
+Uruyanges-iMac:git-cafe-exercise gymuruyange$ git add index-4.html  
+Uruyanges-iMac:git-cafe-exercise gymuruyange$ git commit -m "Fix: Change title to 'Contact'"
+[exercise2 96b5bc1] Fix: Change title to 'Contact'
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Uruyanges-iMac:git-cafe-exercise gymuruyange$ git push -u origin exercise2
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 315 bytes | 315.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'exercise2' on GitHub by visiting:
+remote:      https://github.com/BabrahUSA20/git-cafe-exercise/pull/new/exercise2
+remote: 
+To https://github.com/BabrahUSA20/git-cafe-exercise.git
+ * [new branch]      exercise2 -> exercise2
+branch 'exercise2' set up to track 'origin/exercise2'.
+Uruyanges-iMac:git-cafe-exercise gymuruyange$ 
+
+Uruyanges-iMac:git-cafe-exercise gymuruyange$  git checkout -b exercise3
+Switched to a new branch 'exercise3'
+Uruyanges-iMac:git-cafe-exercise gymuruyange$ git add .
+Uruyanges-iMac:git-cafe-exercise gymuruyange$ git commit -m "Fix: Change telephone no `+1 800 603 6035` to `+1 800 659 6035`'"
+bash: +1: command not found
+bash: +1: command not found
+[exercise3 62eb4ae] Fix: Change telephone no  to '
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Uruyanges-iMac:git-cafe-exercise gymuruyange$ git push -u origin exercise3
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 309 bytes | 309.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'exercise3' on GitHub by visiting:
+remote:      https://github.com/BabrahUSA20/git-cafe-exercise/pull/new/exercise3
+remote: 
+To https://github.com/BabrahUSA20/git-cafe-exercise.git
+ * [new branch]      exercise3 -> exercise3
+branch 'exercise3' set up to track 'origin/exercise3'.
+Uruyanges-iMac:git-cafe-exercise gymuruyange$ 
+
+Uruyanges-iMac:git-cafe-exercise gymuruyange$  git checkout -b exercise4
+Switched to a new branch 'exercise4'
+Uruyanges-iMac:git-cafe-exercise gymuruyange$ 
+
+
+[
+- I reviewed two PRs from your peers and request some changes on those PRs —> and My peers needed to give me access to their repository for me to review them.
+
+- Once, they have adjusted the requested changes, I will need to approve and merge that PR.
+]
 ```
